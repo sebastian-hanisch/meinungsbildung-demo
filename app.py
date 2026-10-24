@@ -110,7 +110,7 @@ st.markdown(
     """
 **Neuntes Stück** der Reihe „Netzwerkanalyse“ und Wurzel des **Anpassungs-Arms**: in den Ausbreitungs-Stücken 5 bis 8 und 13 ändert sich der Zustand eines Betriebs nur in eine Richtung (gesund, dann befallen). Hier **gleichen sich die Betriebe an** und können zurückkehren, sich zersplittern oder erstarren. In einem Netz von Subunternehmern und Lieferanten schätzt jeder Betrieb eine Zahl (zum Beispiel „wie lange dauert die Umstellung auf das neue Verfahren“, eine Zahl zwischen 0 und 1) und gleicht sie laufend mit der seiner Partner ab. Die Demo stellt das **DeGroot-Modell** (jeder ersetzt seine Meinung durch den Mittelwert seiner Partner) dem **Friedkin–Johnsen-Modell** (ein Teil der Anfangsmeinung bleibt) gegenüber. Die Verbindung zur [Zentralität](https://sebastianhanisch-centrality-demo.streamlit.app/): das Gewicht, mit dem ein Betrieb in den Konsens eingeht, ist eine stationäre Verteilung wie beim PageRank, nur ohne Dämpfung.
 
-Die Kernfrage: **Wo landet das Netz, wie schnell, und wer bestimmt den Wert?** Der Hook: der Konsens ist **kein Mittelwert der Köpfe, sondern ein mit dem Grad gewichteter**; wenige Hubs bestimmen den Wert, und die „Weisheit der Menge“ schrumpft entsprechend. Dazu: Verbünde bremsen die Einigung, und schon etwas Sturheit hält Vielfalt, in Verbünden besonders. Die Ergebnisse sind **Modellbefunde**, keine Aussagen über die Wirklichkeit.
+Die Kernfrage: **Wo landet das Netz, wie schnell, und wer bestimmt den Wert?** Der Hook: der Konsens ist **kein Mittelwert der Köpfe, sondern ein mit dem Grad gewichteter**; wenige Hubs bestimmen den Wert, und die „Weisheit der Menge“ schrumpft entsprechend. Dazu: Verbünde bremsen die Einigung, und schon etwas Sturheit lässt einen Rest der Vielfalt stehen, in Verbünden besonders. Die Ergebnisse sind **Modellbefunde**, keine Aussagen über die Wirklichkeit.
 
 Weiter unten: fünf Experimente (**🔬**), der Abschnitt **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
 """
@@ -289,10 +289,10 @@ st.markdown(
 | **Selbstgewicht als Kunstgriff** | Ohne eigenes Gewicht pendeln Meinungen auf bipartiten Netzen; ein Selbstgewicht macht das Modell stabil, ist aber eine Annahme, die die Geschwindigkeit verändert. | – |
 | **Gleiche Empfänglichkeit für alle** | Die Experimente setzen für alle Betriebe dieselbe Sturheit. Verschieden sture Betriebe (ein Betrieb ganz stur) verschieben das Gleichgewicht; als Rechnung ist das im Kern geprüft, in der Demo nicht einstellbar. | – |
 | **Mittelwert statt Zufall** | Die Betriebe mitteln, statt die Meinung eines Partners zu übernehmen. Beim Übernehmen entscheidet der Zufall über den Gewinner. | Stück 10 (Voter-Modell) |
-| **Vertrauen ohne Grenze** | Jeder hört auf jeden Partner, egal wie weit dessen Meinung entfernt ist. Wer nur auf ähnliche Meinungen hört, zersplittert. | Stück 11 (begrenztes Vertrauen) |
+| **Vertrauen ohne Grenze** | Jeder hört auf jeden Partner, egal wie weit dessen Meinung entfernt ist. Wer nur auf ähnliche Meinungen hört, zersplittert bei kleinem Vertrauensradius. | Stück 11 (begrenztes Vertrauen) |
 | **Festes Netz** | Das Netz ändert sich nicht mit den Meinungen. Wer sich nach Gleichgesinnten umsieht, verändert die Struktur. | Stück 12 (Schelling) |
 | **Größte Gruppe** | Isolierte Betriebe und kleine Inseln bleiben unberücksichtigt. | – |
-| **Stichproben** | Die Experimente nehmen Mediane über wenige feste Netze (in der App vier, in der README acht) bei n = 250 bzw. 240; die Streuung zwischen den Netzen ist nicht ausgewiesen. | – |
+| **Stichproben** | Die Experimente nehmen Mediane über wenige feste Netze (in der App vier, in der README acht) bei n = 250 bzw. 240; die Streuung zwischen den Netzen ist nur für n_eff im Potenzgesetz-Netz ausgewiesen (README). | – |
 | **Modellbefund** | Die Demo zeigt Verhalten im Modell, nicht die Wirkung in der Wirklichkeit. Wie weit Meinungsmodelle echte Daten treffen, ist offen (Flache u. a. 2017). | – |
 """
 )
